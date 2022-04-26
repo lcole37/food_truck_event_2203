@@ -24,7 +24,7 @@ RSpec.describe Event do
     expect(@event.food_trucks).to eq([])
   end
 
-  describe 'iteration 2' do
+  describe 'iteration 2 (and 3)' do
     before :each do
       @food_truck1.stock(@item1, 35)
       @food_truck1.stock(@item2, 7)
@@ -47,6 +47,12 @@ RSpec.describe Event do
 
     it 'can list trucks that sell *item*' do
       expect(@event.food_trucks_that_sell(@item1)).to eq([@food_truck1, @food_truck3])
+    end
+
+    it 'can list items alphabetically, with no doubles' do
+      @food_truck3.stock(@item3, 10)
+
+      expect(@event.sorted_item_list).to eq(@item2, @item4, @item1, @item3)
     end
   end
 end
