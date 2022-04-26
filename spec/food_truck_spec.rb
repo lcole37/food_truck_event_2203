@@ -1,4 +1,5 @@
 require 'rspec'
+require './lib/item'
 require './lib/food_truck'
 
 RSpec.describe FoodTruck do
@@ -21,7 +22,7 @@ RSpec.describe FoodTruck do
     expect(@food_truck.check_stock(@item1)).to eq(0)
   end
 
-  it 'can stock items / add to inventory' do
+  xit 'can stock items / add to inventory' do
     @food_truck.stock(@item1, 30)
 
     expect(@food_truck.inventory).to eq({@item1 => 30})
