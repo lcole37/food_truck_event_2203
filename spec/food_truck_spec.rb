@@ -51,7 +51,8 @@ RSpec.describe FoodTruck do
       @food_truck3.stock(@item1, 65)
     end
 
-    xit 'can list potential revenue of truck' do
+    it 'can list potential revenue of truck' do
       expect(@food_truck1.potential_revenue).to eq(148.75)
     end
+  end
 end
