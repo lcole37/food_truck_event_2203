@@ -1,7 +1,7 @@
 require 'rspec'
 require './lib/event'
 
-Rspec.describe Event do
+RSpec.describe Event do
   before :each do
 
   end

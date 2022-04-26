@@ -1,7 +1,7 @@
 require 'rspec'
 require './lib/food_truck'
 
-Rspec.describe FoodTruck do
+RSpec.describe FoodTruck do
   before :each do
 
   end
