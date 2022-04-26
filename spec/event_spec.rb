@@ -45,8 +45,8 @@ RSpec.describe Event do
       expect(@event.food_truck_names).to eq(["Rocky Mountain Pies", "Ba-Nom-a-Nom", "Palisade Peach Shack"])
     end
 
-    xit 'can list trucks that sell *item*' do
-      expect(@event.food_trucks_that_sell(@item1)).to eq([@food_truck_1, @food_Truck_3])
+    it 'can list trucks that sell *item*' do
+      expect(@event.food_trucks_that_sell(@item1)).to eq([@food_truck1, @food_truck3])
     end
   end
 end

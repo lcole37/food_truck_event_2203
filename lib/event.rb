@@ -17,4 +17,14 @@ class Event
   def food_truck_names
     names = @food_trucks.map {|truck| truck.name}
   end
+
+  def food_trucks_that_sell(item)
+    trucks = []
+    @food_trucks.each do |truck| #could find_all be used for hash value?
+      if truck.check_stock(item) > 0
+        trucks << truck
+      end
+    end
+    return trucks
+  end
 end
