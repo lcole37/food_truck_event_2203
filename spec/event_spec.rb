@@ -53,7 +53,7 @@ RSpec.describe Event do
       @food_truck3.stock(@item3, 10)
 
       expect(@event.sorted_item_list).to eq(["Peach Pie (Slice)", "Apple Pie (Slice)", "Banana Nice Cream", "Peach-Raspberry Nice Cream", "Peach Pie (Slice)", "Peach-Raspberry Nice Cream"])
-      #i checked for names instead of @item1 @item2 .... out of time!
+      #i checked for names instead of @item1 @item2 .... out of time to debug!
     end
   end
 end
